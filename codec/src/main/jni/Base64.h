@@ -111,13 +111,13 @@ char* base64_encode(const char *old_string,jchar *alphabet, char fillChar,int ma
                 b = ((((int) old_string[lenght-2]) & 0x03) << 4) | (((int) old_string[lenght-1]) >> 4);
                 c = ((((int) old_string[i+1]) & 0x0F) << 2);
 
-                if(n!=0 && n%maxCharPreLine == 0){encode_string[n++] = '\n';}
+                if(n!=0 && (n+1)%(maxCharPreLine+1) == 0){encode_string[n++] = '\n';}
                 encode_string[n++] = alphabet[a];
-                if(n%maxCharPreLine == 0){encode_string[n++] = '\n';}
+                if((n+1)%(maxCharPreLine+1) == 0){encode_string[n++] = '\n';}
                 encode_string[n++] = alphabet[b];
-                if(n%maxCharPreLine == 0){encode_string[n++] = '\n';}
+                if((n+1)%(maxCharPreLine+1) == 0){encode_string[n++] = '\n';}
                 encode_string[n++] = alphabet[c];
-                if(n%maxCharPreLine == 0){encode_string[n++] = '\n';}
+                if((n+1)%(maxCharPreLine+1) == 0){encode_string[n++] = '\n';}
                 encode_string[n++] = temp_fill_char;
             }
             else
@@ -125,13 +125,13 @@ char* base64_encode(const char *old_string,jchar *alphabet, char fillChar,int ma
                 a = ((int) old_string[lenght-1]) >> 2;
                 b = ((((int) old_string[lenght-1]) & 0x03) << 4);
 
-                if(n!=0 && n%maxCharPreLine == 0){encode_string[n++] = '\n';}
+                if(n!=0 && (n+1)%(maxCharPreLine+1) == 0){encode_string[n++] = '\n';}
                 encode_string[n++] = alphabet[a];
-                if(n%maxCharPreLine == 0){encode_string[n++] = '\n';}
+                if((n+1)%(maxCharPreLine+1) == 0){encode_string[n++] = '\n';}
                 encode_string[n++] = alphabet[b];
-                if(n%maxCharPreLine == 0){encode_string[n++] = '\n';}
+                if((n+1)%(maxCharPreLine+1) == 0){encode_string[n++] = '\n';}
                 encode_string[n++] = temp_fill_char;
-                if(n%maxCharPreLine == 0){encode_string[n++] = '\n';}
+                if((n+1)%(maxCharPreLine+1) == 0){encode_string[n++] = '\n';}
                 encode_string[n++] = temp_fill_char;
             }
         }
@@ -143,14 +143,14 @@ char* base64_encode(const char *old_string,jchar *alphabet, char fillChar,int ma
             temp[2] = ((((int) old_string[i+1]) & 0x0F) << 2) | (((int) old_string[i+2]) >> 6);
             temp[3] = ((int) old_string[i+2]) & 0x3F;
 
-            if(n!=0 && n%maxCharPreLine == 0){encode_string[n++] = '\n';}
+            if(n!=0 && (n+1)%(maxCharPreLine+1) == 0){encode_string[n++] = '\n';}
+            encode_string[n++] = alphabet[temp[0]];
+            if((n+1)%(maxCharPreLine+1) == 0){encode_string[n++] = '\n';}
             encode_string[n++] = alphabet[temp[1]];
-            if(n%maxCharPreLine == 0){encode_string[n++] = '\n';}
+            if((n+1)%(maxCharPreLine+1) == 0){encode_string[n++] = '\n';}
             encode_string[n++] = alphabet[temp[2]];
-            if(n%maxCharPreLine == 0){encode_string[n++] = '\n';}
+            if((n+1)%(maxCharPreLine+1) == 0){encode_string[n++] = '\n';}
             encode_string[n++] = alphabet[temp[3]];
-            if(n%maxCharPreLine == 0){encode_string[n++] = '\n';}
-            encode_string[n++] = alphabet[temp[4]];
         }
     }
     encode_string[n] = '\0';
@@ -215,6 +215,7 @@ char* base64_decode(const char *old_string,jchar *alphabet, char fillChar)
 
     decode_String[n] = '\0';
     LOGI("Decode complete,decode_String[0]:%c",decode_String[0]);
+    LOGI("n: %d",n);
     return decode_String;
 }
 

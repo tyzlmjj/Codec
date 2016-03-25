@@ -1,5 +1,7 @@
 package me.majiajie.codec;
 
+import me.majiajie.codec.exception.DecodeException;
+
 public class CustomBase64_Decode extends Custom
 {
     private String mString;
@@ -13,7 +15,6 @@ public class CustomBase64_Decode extends Custom
         mString = string;
         mFillChar = Const_Base64.FILL_CHAR;
         mAlphabet = Const_Base64.DEFAULT_ALPHABET;
-
     }
 
     /**
@@ -38,8 +39,16 @@ public class CustomBase64_Decode extends Custom
     }
 
     @Override
-    public String doit()
+    public String doit() throws DecodeException
     {
-        return NativeMethod.Base64Decode(mString, mAlphabet, mFillChar);
+        try{
+            return NativeMethod.Base64Decode(mString, mAlphabet, mFillChar);
+        }
+        catch (Throwable throwable)
+        {
+            DecodeException exception = new DecodeException();
+            exception.initCause(throwable);
+            throw exception;
+        }
     }
 }

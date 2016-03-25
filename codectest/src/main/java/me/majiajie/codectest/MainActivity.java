@@ -10,11 +10,11 @@ import android.widget.TextView;
 
 import me.majiajie.codec.Decode;
 import me.majiajie.codec.Encode;
+import me.majiajie.codec.exception.DecodeException;
 
 
 public class MainActivity extends AppCompatActivity
 {
-
     Button btn_base64_encode;
     Button btn_base64_decode;
     TextView textView;
@@ -32,10 +32,15 @@ public class MainActivity extends AppCompatActivity
         editText = (EditText) findViewById(R.id.editText);
 
         String encode = Encode.Custom_Base64("0123456789-0123456789-0123456789")
-                .setMaxCharLine(5)
+                .setMaxCharLine(10)
                 .doit();
         Log.i("asd", "Encode: " +encode);
-//        Log.i("asd", "Decode: " +Decode.Base64(encode));
+
+        try {
+            Log.i("asd", "Decode: " +Decode.Base64(encode));
+        } catch (DecodeException e) {
+            e.printStackTrace();
+        }
 
 
         editText.setText("输入需要加密的字符串");
@@ -49,7 +54,11 @@ public class MainActivity extends AppCompatActivity
         btn_base64_decode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView2.setText(Decode.Base64(textView.getText().toString()));
+                try {
+                    textView2.setText(Decode.Base64(textView.getText().toString()));
+                } catch (DecodeException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
