@@ -10,10 +10,10 @@ extern "C" {
 /*
  * Class:     me_majiajie_codec_NativeMethod
  * Method:    Base64Decode
- * Signature: (Ljava/lang/String;[CCI)Ljava/lang/String;
+ * Signature: (Ljava/lang/String;[CC)Ljava/lang/String;
  */
 JNIEXPORT jstring JNICALL Java_me_majiajie_codec_NativeMethod_Base64Decode
-  (JNIEnv *, jclass, jstring, jcharArray, jchar, jint);
+  (JNIEnv *, jclass, jstring, jcharArray, jchar);
 
 /*
  * Class:     me_majiajie_codec_NativeMethod

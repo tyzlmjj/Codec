@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CodecLibrary.iml" filepath="$PROJECT_DIR$/CodecLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Codec.iml" filepath="$PROJECT_DIR$/Codec.iml" />
       <module fileurl="file://$PROJECT_DIR$/codec/codec.iml" filepath="$PROJECT_DIR$/codec/codec.iml" />
       <module fileurl="file://$PROJECT_DIR$/codectest/codectest.iml" filepath="$PROJECT_DIR$/codectest/codectest.iml" />
     </modules>

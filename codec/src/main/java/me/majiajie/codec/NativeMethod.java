@@ -7,8 +7,8 @@ class NativeMethod
         System.loadLibrary("Codec");
     }
 
-    protected static native String Base64Decode(String oldString,char[] alphabet,char fillChar,int maxCharPreLine);
+    public static native String Base64Decode(String oldString,char[] alphabet,char fillChar);
 
-    protected static native String Base64Encode(String oldString,char[] alphabet,char fillChar,int maxCharPreLine);
+    public static native String Base64Encode(String oldString,char[] alphabet,char fillChar,int maxCharPreLine);
 
 }

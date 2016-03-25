@@ -1,3 +1,0 @@
-APP_MODULES := Base64
-
-APP_ABI := all
