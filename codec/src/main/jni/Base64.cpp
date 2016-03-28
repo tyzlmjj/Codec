@@ -1,15 +1,7 @@
 #include <jni.h>
-#include <stdio.h>
 #include "Base64.h"
+#include "MD5.h"
 #include "me_majiajie_codec_NativeMethod.h"
-
-//导入日志头文件
-#include <android/log.h>
-//修改日志tag中的值
-#define LOG_TAG "asd"
-//日志显示的等级
-#define LOGI(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
-
 
 JNIEXPORT jstring JNICALL Java_me_majiajie_codec_NativeMethod_Base64Decode
         (JNIEnv * env, jclass jclass1, jstring oldString, jcharArray alphabet, jchar fillChar)
@@ -40,8 +32,6 @@ JNIEXPORT jstring JNICALL Java_me_majiajie_codec_NativeMethod_Base64Encode
     if(maxCharPreLine >0)
     {
         encode_string =base64_encode(old,encode_alphabet,fillChar,maxCharPreLine);
-        LOGI("maxCharPreLine: %d",maxCharPreLine);
-        LOGI("encode_string[0]: %c",encode_string[0]);
     }
     else
     {
@@ -52,6 +42,26 @@ JNIEXPORT jstring JNICALL Java_me_majiajie_codec_NativeMethod_Base64Encode
     env->ReleaseCharArrayElements(alphabet,encode_alphabet,0);
 
     return env->NewStringUTF(encode_string);
+}
+
+JNIEXPORT jstring JNICALL Java_me_majiajie_codec_NativeMethod_Md5Encode
+        (JNIEnv *env, jclass jclass1, jstring old_string, jboolean isSixteen, jboolean isLow)
+{
+    const char * old =env->GetStringUTFChars(old_string,0);
+    char * md5_str = md5_encode(old,isLow);
+
+    if(isSixteen)
+    {
+        char str[16];
+        int i;
+        for(i = 0;i < 16;i++){
+            str[i] = md5_str[16+i];
+        }
+        env->ReleaseStringUTFChars(old_string,old);
+        return env->NewStringUTF(str);
+    }
+    env->ReleaseStringUTFChars(old_string,old);
+    return env->NewStringUTF(md5_str);
 }
 
 

@@ -3,6 +3,9 @@ obj/local/mips64/objs/Codec/Base64.o: jni/Base64.cpp \
  D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/sys/cdefs.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/sys/cdefs_elf.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/android/api-level.h \
+ jni/Base64.h \
+ D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/android/log.h \
+ jni/MD5.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/stdio.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/sys/types.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/stdint.h \
@@ -19,8 +22,6 @@ obj/local/mips64/objs/Codec/Base64.o: jni/Base64.cpp \
  D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/asm/sgidefs.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/asm-generic/posix_types.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/sys/sysmacros.h \
- jni/Base64.h \
- D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/android/log.h \
  jni/me_majiajie_codec_NativeMethod.h
 
 D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/jni.h:
@@ -30,6 +31,12 @@ D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/sys/cdefs.h:
 D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/sys/cdefs_elf.h:
 
 D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/android/api-level.h:
+
+jni/Base64.h:
+
+D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/android/log.h:
+
+jni/MD5.h:
 
 D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/stdio.h:
 
@@ -62,9 +69,5 @@ D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/asm/sgidefs.h
 D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/asm-generic/posix_types.h:
 
 D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/sys/sysmacros.h:
-
-jni/Base64.h:
-
-D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/android/log.h:
 
 jni/me_majiajie_codec_NativeMethod.h:

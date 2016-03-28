@@ -23,6 +23,14 @@ JNIEXPORT jstring JNICALL Java_me_majiajie_codec_NativeMethod_Base64Decode
 JNIEXPORT jstring JNICALL Java_me_majiajie_codec_NativeMethod_Base64Encode
   (JNIEnv *, jclass, jstring, jcharArray, jchar, jint);
 
+/*
+ * Class:     me_majiajie_codec_NativeMethod
+ * Method:    Md5Encode
+ * Signature: (Ljava/lang/String;ZZ)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_me_majiajie_codec_NativeMethod_Md5Encode
+  (JNIEnv *, jclass, jstring, jboolean, jboolean);
+
 #ifdef __cplusplus
 }
 #endif

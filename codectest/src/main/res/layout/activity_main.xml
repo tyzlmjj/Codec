@@ -16,11 +16,22 @@
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/btn_base64_encode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Base64 encode"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_base64_encode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Base64 encode"/>
+            <Button
+                android:id="@+id/btn_md5_encode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MD5 encode"/>
+        </LinearLayout>
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"

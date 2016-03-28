@@ -11,4 +11,6 @@ class NativeMethod
 
     public static native String Base64Encode(String oldString,char[] alphabet,char fillChar,int maxCharPreLine);
 
+    public static native String Md5Encode(String oldString,boolean isSixteen,boolean isLow);
+
 }

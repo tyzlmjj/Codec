@@ -4,7 +4,12 @@ import me.majiajie.codec.exception.DecodeException;
 
 public class Decode {
 
-    public static String Base64(String string) throws DecodeException
+    /**
+     * 标准Base64解码
+     * @param string    需要解码的字符串
+     * @return Base64解码后的字符串，如果解码失败，返回null
+     */
+    public static String Base64(String string)
     {
         try{
             return NativeMethod.Base64Decode
@@ -12,9 +17,7 @@ public class Decode {
         }
         catch (Throwable throwable)
         {
-            DecodeException exception = new DecodeException();
-            exception.initCause(throwable);
-            throw exception;
+           return null;
         }
     }
 

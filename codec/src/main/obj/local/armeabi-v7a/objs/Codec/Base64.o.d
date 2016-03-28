@@ -3,6 +3,9 @@ obj/local/armeabi-v7a/objs/Codec/Base64.o: jni/Base64.cpp \
  D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/sys/cdefs.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/sys/cdefs_elf.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/android/api-level.h \
+ jni/Base64.h \
+ D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/android/log.h \
+ jni/MD5.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/stdio.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/sys/types.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/stdint.h \
@@ -16,8 +19,6 @@ obj/local/armeabi-v7a/objs/Codec/Base64.o: jni/Base64.cpp \
  D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/linux/types.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/machine/kernel.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/sys/sysmacros.h \
- jni/Base64.h \
- D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/android/log.h \
  jni/me_majiajie_codec_NativeMethod.h
 
 D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/jni.h:
@@ -27,6 +28,12 @@ D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/sys/cdefs.h:
 D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/sys/cdefs_elf.h:
 
 D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/android/api-level.h:
+
+jni/Base64.h:
+
+D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/android/log.h:
+
+jni/MD5.h:
 
 D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/stdio.h:
 
@@ -53,9 +60,5 @@ D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/linux/types.h:
 D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/machine/kernel.h:
 
 D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/sys/sysmacros.h:
-
-jni/Base64.h:
-
-D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/android/log.h:
 
 jni/me_majiajie_codec_NativeMethod.h:

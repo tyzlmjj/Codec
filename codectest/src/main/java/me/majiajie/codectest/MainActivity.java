@@ -16,6 +16,7 @@ import me.majiajie.codec.exception.DecodeException;
 public class MainActivity extends AppCompatActivity
 {
     Button btn_base64_encode;
+    Button btn_md5_encode;
     Button btn_base64_decode;
     TextView textView;
     TextView textView2;
@@ -26,21 +27,11 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         btn_base64_encode = (Button) findViewById(R.id.btn_base64_encode);
+        btn_md5_encode = (Button) findViewById(R.id.btn_md5_encode);
         btn_base64_decode = (Button) findViewById(R.id.btn_base64_decode);
         textView = (TextView) findViewById(R.id.textView);
         textView2 = (TextView) findViewById(R.id.textView2);
         editText = (EditText) findViewById(R.id.editText);
-
-        String encode = Encode.Custom_Base64("0123456789-0123456789-0123456789")
-                .setMaxCharLine(10)
-                .doit();
-        Log.i("asd", "Encode: " +encode);
-
-        try {
-            Log.i("asd", "Decode: " +Decode.Base64(encode));
-        } catch (DecodeException e) {
-            e.printStackTrace();
-        }
 
 
         editText.setText("输入需要加密的字符串");
@@ -50,15 +41,17 @@ public class MainActivity extends AppCompatActivity
                 textView.setText(Encode.Base64(editText.getText().toString()));
             }
         });
-
-        btn_base64_decode.setOnClickListener(new View.OnClickListener() {
+        btn_md5_encode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    textView2.setText(Decode.Base64(textView.getText().toString()));
-                } catch (DecodeException e) {
-                    e.printStackTrace();
-                }
+                textView.setText(Encode.MD5(editText.getText().toString()));
+            }
+        });
+        btn_base64_decode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                textView2.setText(Decode.Base64(textView.getText().toString()));
             }
         });
 
