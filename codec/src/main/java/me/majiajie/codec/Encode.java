@@ -21,34 +21,34 @@ public class Encode
     }
 
     /**
-     * MD5加密，默认32位、大写
+     * MD5加密，默认32位、小写
      */
     public static String MD5(String string)
     {
-        return  NativeMethod.Md5Encode(string,false,false);
+        return  NativeMethod.Md5Encode(string,false,true);
     }
 
     /**
-     * MD5加密，32位、小写
+     * MD5加密，32位、大写
      */
-    public static String MD5_low(String string)
+    public static String MD5_UpperCase(String string)
     {
-        return  NativeMethod.Md5Encode(string, false, true);
-    }
-
-    /**
-     * MD5加密，16位、大写
-     */
-    public static String MD5_16(String string)
-    {
-        return  NativeMethod.Md5Encode(string, true, false);
+        return  NativeMethod.Md5Encode(string, false, false);
     }
 
     /**
      * MD5加密，16位、小写
      */
-    public static String MD5_16_low(String string)
+    public static String MD5_16(String string)
     {
         return  NativeMethod.Md5Encode(string, true, true);
+    }
+
+    /**
+     * MD5加密，16位、大写
+     */
+    public static String MD5_16_UpperCase(String string)
+    {
+        return  NativeMethod.Md5Encode(string, true, false);
     }
 }

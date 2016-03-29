@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import me.majiajie.codec.Decode;
 import me.majiajie.codec.Encode;
-import me.majiajie.codec.exception.DecodeException;
 
 
 public class MainActivity extends AppCompatActivity
@@ -34,6 +33,7 @@ public class MainActivity extends AppCompatActivity
         editText = (EditText) findViewById(R.id.editText);
 
 
+
         editText.setText("输入需要加密的字符串");
         btn_base64_encode.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +44,10 @@ public class MainActivity extends AppCompatActivity
         btn_md5_encode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("asd","MD5:"+Encode.MD5(editText.getText().toString()));
+                Log.i("asd","MD5_low:"+Encode.MD5_UpperCase(editText.getText().toString()));
+                Log.i("asd","MD5_16:"+Encode.MD5_16(editText.getText().toString()));
+                Log.i("asd","MD5_16_low:"+Encode.MD5_16_UpperCase(editText.getText().toString()));
                 textView.setText(Encode.MD5(editText.getText().toString()));
             }
         });
@@ -51,7 +55,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                textView2.setText(Decode.Base64(textView.getText().toString()));
+                textView2.setText(Decode.Base64(textView.getText().toString())+"");
             }
         });
 

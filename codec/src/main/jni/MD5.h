@@ -187,9 +187,8 @@ void mainLoop(int *M)
 /**
 * 最后逆序处理
 */
-char* changeHex(int a[] ,const char *temp_str16)
+char* changeHex(char* str,int a[] ,const char *temp_str16)
 {
-    char* str = new char[32];
     int i,j;
     for(i = 0;i < 4 ;i++)
     {
@@ -201,12 +200,12 @@ char* changeHex(int a[] ,const char *temp_str16)
             str[i*8+j*2+1] = temp_str16[n & 0xF];
         }
     }
+    str[32] = '\0';
     return str;
 }
 
 char* md5_encode(const char *old_string, jboolean isLow)
 {
-
     unsigned int lenght = str_lenght(old_string);
     int r = lenght % 64;
     int fill_lenght = ( r < 56 ? 64 : 128)-r;
@@ -232,7 +231,10 @@ char* md5_encode(const char *old_string, jboolean isLow)
     }
     int tmp[4] = {temp_a,temp_b,temp_c,temp_d};
 
-    return changeHex(tmp,isLow?STR16_LOW:STR16);
+    char* md5_str = new char[32+1];
+    changeHex(md5_str,tmp,isLow?STR16_LOW:STR16);
+
+    return md5_str;
 }
 
 

@@ -1,26 +1,24 @@
 package me.majiajie.codec;
 
-import me.majiajie.codec.exception.DecodeException;
 
 public class Decode {
 
     /**
-     * 标准Base64解码
+     * 标准Base64解码<br/>
+     * <strong>注意：</strong>如果传入非Base64加密字符串会是应用崩溃，这个错误是可以人为避免的，<br/>
+     * 所以为了算法的速度，并未检查字符串的正确性。
      * @param string    需要解码的字符串
-     * @return Base64解码后的字符串，如果解码失败，返回null
+     * @return Base64解码后的字符串
      */
     public static String Base64(String string)
     {
-        try{
-            return NativeMethod.Base64Decode
+        return NativeMethod.Base64Decode
                     (string,Const_Base64.DEFAULT_ALPHABET,Const_Base64.FILL_CHAR);
-        }
-        catch (Throwable throwable)
-        {
-           return null;
-        }
     }
 
+    /**
+     * 自定义Base64解码
+     */
     public static CustomBase64_Decode Custom_Base64(String string)
     {
         return new CustomBase64_Decode(string);

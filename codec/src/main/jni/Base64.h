@@ -1,19 +1,7 @@
 
-//导入日志头文件
-#include <android/log.h>
-//修改日志tag中的值
-#define LOG_TAG "asd"
-//日志显示的等级
-#define LOGI(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
-
 #ifndef CODEC_BASE64_H
 #define CODEC_BASE64_H
 
-
-
-/*
-	Base64加解密
-*/
 
 //标准的填充字符
 #define DEFAULT_FILL '='
@@ -214,8 +202,7 @@ char* base64_decode(const char *old_string,jchar *alphabet, char fillChar)
     }
 
     decode_String[n] = '\0';
-    LOGI("Decode complete,decode_String[0]:%c",decode_String[0]);
-    LOGI("n: %d",n);
+
     return decode_String;
 }
 

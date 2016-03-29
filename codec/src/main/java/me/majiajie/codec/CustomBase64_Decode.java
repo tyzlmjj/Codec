@@ -41,14 +41,8 @@ public class CustomBase64_Decode extends Custom
     @Override
     public String doit() throws DecodeException
     {
-        try{
-            return NativeMethod.Base64Decode(mString, mAlphabet, mFillChar);
-        }
-        catch (Throwable throwable)
-        {
-            DecodeException exception = new DecodeException();
-            exception.initCause(throwable);
-            throw exception;
-        }
+
+        return NativeMethod.Base64Decode(mString, mAlphabet, mFillChar);
+
     }
 }

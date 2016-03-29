@@ -2,8 +2,10 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
+LOCAL_CPP_FEATURES := exceptions rtti
+
 LOCAL_MODULE := Codec
-LOCAL_SRC_FILES := Base64.cpp
+LOCAL_SRC_FILES := Codec.cpp
 
 LOCAL_LDLIBS := -llog
 
