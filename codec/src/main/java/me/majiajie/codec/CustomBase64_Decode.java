@@ -1,7 +1,5 @@
 package me.majiajie.codec;
 
-import me.majiajie.codec.exception.DecodeException;
-
 public class CustomBase64_Decode extends Custom
 {
     private String mString;
@@ -39,10 +37,8 @@ public class CustomBase64_Decode extends Custom
     }
 
     @Override
-    public String doit() throws DecodeException
+    public String doit()
     {
-
         return NativeMethod.Base64Decode(mString, mAlphabet, mFillChar);
-
     }
 }

@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity
         btn_base64_encode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("asd","Base64 Encode:"+Encode.Base64(editText.getText().toString()));
                 textView.setText(Encode.Base64(editText.getText().toString()));
             }
         });
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+
                 textView2.setText(Decode.Base64(textView.getText().toString())+"");
             }
         });

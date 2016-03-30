@@ -60,7 +60,7 @@ JNIEXPORT jstring JNICALL Java_me_majiajie_codec_NativeMethod_Md5Encode
         char str[16+1];
         int i;
         for(i = 0;i < 16;i++){
-            str[i] = md5_str[16+i];
+            str[i] = md5_str[8+i];
         }
         str[16] = '\0';
         env->ReleaseStringUTFChars(old_string,old);

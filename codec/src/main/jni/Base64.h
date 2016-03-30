@@ -206,8 +206,4 @@ char* base64_decode(const char *old_string,jchar *alphabet, char fillChar)
     return decode_String;
 }
 
-
-
-
-
 #endif //CODEC_BASE64_H
