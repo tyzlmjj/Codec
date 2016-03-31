@@ -19,10 +19,18 @@ android {
         }
     }
 }
+tasks.withType(Javadoc) { options.encoding = "UTF-8" }
+
+repositories {
+    maven {
+        url 'https://dl.bintray.com/tyzlmjj/maven'
+    }
+}
+
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.1'
-    compile project(':codec')
+    compile 'me.majiajie.code:codec:0.1.0-test'
 }

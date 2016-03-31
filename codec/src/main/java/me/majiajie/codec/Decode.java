@@ -4,8 +4,8 @@ package me.majiajie.codec;
 public class Decode {
 
     /**
-     * 标准Base64解码<br/>
-     * <strong>注意：</strong>如果传入非Base64加密字符串会是应用崩溃，这个错误是可以人为避免的，<br/>
+     * 标准Base64解码<p>
+     * <strong>注意：</strong>如果传入非Base64加密字符串会使应用崩溃，这个错误是可以人为避免的，<p>
      * 所以为了算法的速度，并未检查字符串的正确性。
      * @param string    需要解码的字符串
      * @return Base64解码后的字符串
@@ -18,6 +18,8 @@ public class Decode {
 
     /**
      * 自定义Base64解码
+     * @param string 需要解码的字符串
+     * @return Base64解码后的字符串
      */
     public static CustomBase64_Decode Custom_Base64(String string)
     {

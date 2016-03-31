@@ -20,8 +20,7 @@ obj/local/mips64/objs/Codec/Codec.o: jni/Codec.cpp \
  D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/asm/sgidefs.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/asm-generic/posix_types.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/sys/sysmacros.h \
- jni/me_majiajie_codec_NativeMethod.h \
- D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/android/log.h
+ jni/me_majiajie_codec_NativeMethod.h
 
 D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/jni.h:
 
@@ -68,5 +67,3 @@ D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/asm-generic/p
 D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/sys/sysmacros.h:
 
 jni/me_majiajie_codec_NativeMethod.h:
-
-D:/MJJ/sdk/ndk-bundle/platforms/android-21/arch-mips64/usr/include/android/log.h:

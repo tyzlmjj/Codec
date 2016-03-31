@@ -18,8 +18,7 @@ obj/local/x86/objs/Codec/Codec.o: jni/Codec.cpp \
  D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-x86/usr/include/linux/types.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-x86/usr/include/machine/kernel.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-x86/usr/include/sys/sysmacros.h \
- jni/me_majiajie_codec_NativeMethod.h \
- D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-x86/usr/include/android/log.h
+ jni/me_majiajie_codec_NativeMethod.h
 
 D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-x86/usr/include/jni.h:
 
@@ -62,5 +61,3 @@ D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-x86/usr/include/machine/kernel.h:
 D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-x86/usr/include/sys/sysmacros.h:
 
 jni/me_majiajie_codec_NativeMethod.h:
-
-D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-x86/usr/include/android/log.h:

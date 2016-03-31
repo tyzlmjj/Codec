@@ -18,8 +18,7 @@ obj/local/mips/objs/Codec/Codec.o: jni/Codec.cpp \
  D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-mips/usr/include/linux/types.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-mips/usr/include/machine/kernel.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-mips/usr/include/sys/sysmacros.h \
- jni/me_majiajie_codec_NativeMethod.h \
- D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-mips/usr/include/android/log.h
+ jni/me_majiajie_codec_NativeMethod.h
 
 D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-mips/usr/include/jni.h:
 
@@ -62,5 +61,3 @@ D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-mips/usr/include/machine/kernel.h
 D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-mips/usr/include/sys/sysmacros.h:
 
 jni/me_majiajie_codec_NativeMethod.h:
-
-D:/MJJ/sdk/ndk-bundle/platforms/android-9/arch-mips/usr/include/android/log.h:

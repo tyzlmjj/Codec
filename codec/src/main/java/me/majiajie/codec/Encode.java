@@ -5,6 +5,8 @@ public class Encode
 {
     /**
      * 标准Base64加密
+     * @param string    需要加密的字符串
+     * @return 加密后的字符串
      */
     public static String Base64(String string)
     {
@@ -14,6 +16,8 @@ public class Encode
 
     /**
      * 自定义Base64加密
+     * @param string    需要加密的字符串
+     * @return 加密后的字符串
      */
     public static CustomBase64_Encode Custom_Base64(String string)
     {
@@ -22,6 +26,8 @@ public class Encode
 
     /**
      * MD5加密，默认32位、小写
+     * @param string    需要加密的字符串
+     * @return 加密后的字符串
      */
     public static String MD5(String string)
     {
@@ -30,6 +36,8 @@ public class Encode
 
     /**
      * MD5加密，32位、大写
+     * @param string    需要加密的字符串
+     * @return 加密后的字符串
      */
     public static String MD5_UpperCase(String string)
     {
@@ -38,6 +46,8 @@ public class Encode
 
     /**
      * MD5加密，16位、小写
+     * @param string    需要加密的字符串
+     * @return 加密后的字符串
      */
     public static String MD5_16(String string)
     {
@@ -46,6 +56,8 @@ public class Encode
 
     /**
      * MD5加密，16位、大写
+     * @param string    需要加密的字符串
+     * @return 加密后的字符串
      */
     public static String MD5_16_UpperCase(String string)
     {

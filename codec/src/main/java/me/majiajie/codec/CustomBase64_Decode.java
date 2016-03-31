@@ -16,9 +16,10 @@ public class CustomBase64_Decode extends Custom
     }
 
     /**
-     * 设置字母表。<br/>
+     * 设置64位字符映射表，对应ASCII。
+     * <strong>注意：</strong>解码和编码需要设置相同的<p>
      * @param alphabet 64位的字符数组
-     * @return
+     * @return 自定义构建类
      */
     public CustomBase64_Decode setAlphabet(char[] alphabet)
     {
@@ -27,9 +28,11 @@ public class CustomBase64_Decode extends Custom
     }
 
     /**
-     * 设置末尾填充的字符，默认是‘=’。
-     * 填充字符是在编码字符位数不足时使用。<br/>
-     * <strong>注意：</strong>解码和编码需要设置相同的
+     * 设置末尾填充的字符，默认是‘=’。<p>
+     * 填充字符是在编码字符位数不足时使用。<p>
+     * <strong>注意：</strong>这个字符必须不能为64位映射表中的字符，否则可能出错，解码和编码需要设置相同的
+     * @param fillChar 填充字符
+     * @return 自定义构建类
      */
     public CustomBase64_Decode setFillChar(char fillChar) {
         mFillChar = fillChar;

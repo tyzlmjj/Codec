@@ -17,8 +17,7 @@ obj/local/armeabi-v7a/objs/Codec/Codec.o: jni/Codec.cpp \
  D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/linux/types.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/machine/kernel.h \
  D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/sys/sysmacros.h \
- jni/me_majiajie_codec_NativeMethod.h \
- D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/android/log.h
+ jni/me_majiajie_codec_NativeMethod.h
 
 D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/jni.h:
 
@@ -59,5 +58,3 @@ D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/machine/kernel.h:
 D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/sys/sysmacros.h:
 
 jni/me_majiajie_codec_NativeMethod.h:
-
-D:/MJJ/sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/android/log.h:
