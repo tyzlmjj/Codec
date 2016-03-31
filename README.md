@@ -1,11 +1,13 @@
 # Codec
-Android encoding and decoding library
+
 用C实现的安卓解码与编码库。
 
 目前支持的算法：
 
 - BASE64
 - MD5
+
+[使用指南](https://github.com/tyzlmjj/Codec/wiki/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97)
 
 ##引入库
 
@@ -25,11 +27,20 @@ and for Maven:
 ```
 
 ##联系我
+
 **Email:** tyzl931019@gmail.com
+
 **QQ**: 809402737
 
+木有微博、推特！
 
-##许可证 LICENSE
+##错误反馈
+
+这个库有BUG？请点这里 [Github Issues](https://github.com/tyzlmjj/Codec/issues)
+
+代码里没BUG的程序员都太年轻，又或者……
+
+##许可证
 
 Codec is released under the [Apache 2.0 license](https://github.com/tyzlmjj/Codec/blob/master/LICENSE).
 ```
@@ -47,5 +58,3 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-
-
