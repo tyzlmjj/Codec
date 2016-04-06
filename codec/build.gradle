@@ -63,6 +63,17 @@ dependencies {
 
 tasks.withType(Javadoc) { options.encoding = "UTF-8" }
 
+
+task ndkBuild(type: Exec) {
+
+    commandLine 'ndk-build', '-j'
+
+}
+
+tasks.withType(JavaCompile) {
+    compileTask -> compileTask.dependsOn ndkBuild
+}
+
 //apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
 //apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
 
