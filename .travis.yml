@@ -22,6 +22,7 @@ before_script:
 before_install:
   # Set up the Android environment.
   - export NDK_HOME=${HOME}/android-ndk-linux
+  - chmod +x scripts/travisci_install_android_ndk.sh
   - ./scripts/travisci_install_android_ndk.sh
 
 before_cache:
