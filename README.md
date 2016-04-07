@@ -1,5 +1,4 @@
-# Codec
-
+# Codec	[![Build Status](https://travis-ci.org/tyzlmjj/Codec.svg?branch=develop)](https://travis-ci.org/tyzlmjj/Codec)	[ ![Version](https://api.bintray.com/packages/tyzlmjj/maven/codec/images/download.svg) ](https://bintray.com/tyzlmjj/maven/codec/view)											
 用C实现的安卓解码与编码库。
 
 目前支持的算法：
