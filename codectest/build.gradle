@@ -18,6 +18,10 @@ android {
 
         }
     }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 tasks.withType(Javadoc) { options.encoding = "UTF-8" }
 
