@@ -1,43 +1,7 @@
 # Codec	[![Build Status](https://travis-ci.org/tyzlmjj/Codec.svg?branch=develop)](https://travis-ci.org/tyzlmjj/Codec)	[ ![Version](https://api.bintray.com/packages/tyzlmjj/maven/codec/images/download.svg) ](https://bintray.com/tyzlmjj/maven/codec/view)											
-用C实现的安卓解码与编码库。
 
-目前支持的算法：
+开发分支
 
-- BASE64
-- MD5
-
-[使用指南](https://github.com/tyzlmjj/Codec/wiki/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97)
-
-##引入库
-
-for Gradle:
-```
-compile 'me.majiajie:codec:1.0.0'
-```
-
-and for Maven:
-```
-<dependency>
-  <groupId>me.majiajie</groupId>
-  <artifactId>codec</artifactId>
-  <version>1.0.0</version>
-  <type>pom</type>
-</dependency>
-```
-
-##联系我
-
-**Email:** tyzl931019@gmail.com
-
-**QQ**: 809402737
-
-木有微博、推特！
-
-##错误反馈
-
-这个库有BUG？请点这里 [Github Issues](https://github.com/tyzlmjj/Codec/issues)
-
-代码里没BUG的程序员都太年轻，又或者……
 
 ##许可证
 
