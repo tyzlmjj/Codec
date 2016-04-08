@@ -3,25 +3,31 @@
 #include "MD5.h"
 #include "me_majiajie_codec_NativeMethod.h"
 
-
-
-JNIEXPORT jstring JNICALL Java_me_majiajie_codec_NativeMethod_Base64Decode
+JNIEXPORT jbyteArray JNICALL Java_me_majiajie_codec_NativeMethod_Base64Decode
         (JNIEnv * env, jclass jclass1, jstring oldString, jcharArray alphabet, jchar fillChar)
 {
     jchar decode_alphabet[64];
     env->GetCharArrayRegion(alphabet , 0 , 64 , decode_alphabet);
 
     const char *old = env->GetStringUTFChars(oldString, 0);
+    if(old == NULL)
+    {
+        return NULL;
+    }
 
-    char *decode_String = base64_decode(old,decode_alphabet,fillChar);
+    int lenght;
+    for(lenght=0; old[lenght] != '\0';lenght++);
+
+    signed char *decode_String = base64_decode(old,decode_alphabet,fillChar,lenght);
 
     env->ReleaseStringUTFChars(oldString,old);
 
-    return env->NewStringUTF(decode_String);
+    jbyteArray byteArray = env->NewByteArray(lenght/4*3);
+    env->SetByteArrayRegion(byteArray,0,lenght/4*3,decode_String);
+    return byteArray;
 }
 
-
-JNIEXPORT jstring JNICALL Java_me_majiajie_codec_NativeMethod_Base64Encode
+JNIEXPORT jbyteArray JNICALL Java_me_majiajie_codec_NativeMethod_Base64Encode
         (JNIEnv *env, jclass jclass1, jstring oldString, jcharArray alphabet, jchar fillChar, jint maxCharPreLine){
 
     jchar encode_alphabet[64];
@@ -29,19 +35,25 @@ JNIEXPORT jstring JNICALL Java_me_majiajie_codec_NativeMethod_Base64Encode
 
     const char *old = env->GetStringUTFChars(oldString, 0);
 
-    char *encode_string;
+    int lenght;
+    for(lenght=0;old[lenght] != '\0';lenght++);
+
+    signed char *encode_string;
     if(maxCharPreLine >0)
     {
-        encode_string =base64_encode(old,encode_alphabet,fillChar,maxCharPreLine);
+        encode_string =base64_encode(old,encode_alphabet,fillChar,maxCharPreLine,lenght);
     }
     else
     {
-        encode_string = base64_encode(old,encode_alphabet,fillChar);
+        encode_string = base64_encode(old,encode_alphabet,fillChar,lenght);
     }
-
     env->ReleaseStringUTFChars(oldString,old);
 
-    return env->NewStringUTF(encode_string);
+    int l = lenght%3==0? lenght/3*4: lenght/3*4+4;
+    jbyteArray byteArray = env->NewByteArray(l);
+    env->SetByteArrayRegion(byteArray,0,l,encode_string);
+
+    return byteArray;
 }
 
 JNIEXPORT jstring JNICALL Java_me_majiajie_codec_NativeMethod_Md5Encode

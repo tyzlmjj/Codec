@@ -1,5 +1,9 @@
 package me.majiajie.codec;
 
+import java.nio.charset.Charset;
+
+import me.majiajie.codec.charset.CodecCharsets;
+
 public class CustomBase64_Decode extends Custom
 {
     private String mString;
@@ -7,6 +11,8 @@ public class CustomBase64_Decode extends Custom
     private char[] mAlphabet;
 
     private char mFillChar;
+
+    private Charset mCharset;
 
     public CustomBase64_Decode(String string)
     {
@@ -39,9 +45,32 @@ public class CustomBase64_Decode extends Custom
         return this;
     }
 
+    /**
+     * 设置字符编码
+     * @param charset 字符编码，建议使用{@link CodecCharsets CodecCharsets}
+     * @return  自定义构建类
+     */
+    public CustomBase64_Decode setCharset(Charset charset) {
+        mCharset = charset;
+        return this;
+    }
+
     @Override
     public String doit()
     {
-        return NativeMethod.Base64Decode(mString, mAlphabet, mFillChar);
+        if(mCharset!=null){
+            return new String(doit_byte(),mCharset);
+        }
+        else
+        {
+            return new String(doit_byte());
+        }
+    }
+
+    @Override
+    public byte[] doit_byte()
+    {
+        return NativeMethod.Base64Decode
+                (mString, mAlphabet, mFillChar);
     }
 }
