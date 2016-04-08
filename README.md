@@ -1,6 +1,6 @@
-# Codec	[![Build Status](https://travis-ci.org/tyzlmjj/Codec.svg?branch=develop)](https://travis-ci.org/tyzlmjj/Codec)	[ ![Version](https://api.bintray.com/packages/tyzlmjj/maven/codec/images/download.svg) ](https://bintray.com/tyzlmjj/maven/codec/view)											
+# Codec	[![Build Status](https://travis-ci.org/tyzlmjj/Codec.svg?branch=release)](https://travis-ci.org/tyzlmjj/Codec)	[ ![Version](https://api.bintray.com/packages/tyzlmjj/maven/codec/images/download.svg) ](https://bintray.com/tyzlmjj/maven/codec/view)
 
-开发分支
+预发布分支
 
 
 ##许可证
