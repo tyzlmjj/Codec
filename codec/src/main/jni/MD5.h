@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <jni.h>
 
-
 #ifndef CODEC_MD5_H
 #define CODEC_MD5_H
 
@@ -58,11 +57,9 @@ const unsigned int s[]={7,12,17,22,7,12,17,22,7,12,17,22,7,
                         4,11,16,23,4,11,16,23,4,11,16,23,4,11,16,23,6,10,
                         15,21,6,10,15,21,6,10,15,21,6,10,15,21};
 
-//16进制
+//16个字符
 #define STR16 "0123456789ABCDEF"
 #define STR16_LOW "0123456789abcdef"
-
-
 
 /**
 * First : 填充字符

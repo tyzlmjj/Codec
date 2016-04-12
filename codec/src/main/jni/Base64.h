@@ -15,14 +15,12 @@ char  temp_fill_char;
 /**
  * Base64加密算法，无换行符
  */
-char* base64_encode(const char *old_string,jchar *alphabet, char fillChar)
+signed char* base64_encode(const char *old_string,jchar *alphabet, char fillChar,int lenght)
 {
     temp_fill_char = fillChar;
 
-    int lenght;
-    for(lenght=0;old_string[lenght] != '\0';lenght++);
     int encode_lenght = lenght%3==0? lenght/3*4+1: lenght/3*4+4+1;
-    char* encode_string = new char[encode_lenght];
+    signed char* encode_string = new signed char[encode_lenght];
 
     int n = 0;
     int i;
@@ -76,15 +74,14 @@ char* base64_encode(const char *old_string,jchar *alphabet, char fillChar)
 /**
  * Base64加密算法，有换行符
  */
-char* base64_encode(const char *old_string,jchar *alphabet, char fillChar,int maxCharPreLine)
+signed char* base64_encode(const char *old_string,jchar *alphabet, char fillChar,int maxCharPreLine,int lenght)
 {
     temp_fill_char = fillChar;
 
-    int lenght;
-    for(lenght=0;old_string[lenght] != '\0';lenght++);
+
     int encode_lenght = lenght%3==0? lenght/3*4+1: lenght/3*4+4+1;
     encode_lenght += encode_lenght%maxCharPreLine;
-    char* encode_string = new char[encode_lenght];
+    signed char* encode_string = new signed char[encode_lenght];
 
     int n = 0;
     int i;
@@ -163,13 +160,11 @@ int decode_Char(int c,jchar * alphabet )
 /**
  * Base64解码
  */
-char* base64_decode(const char *old_string,jchar *alphabet, char fillChar)
+signed char* base64_decode(const char *old_string,jchar *alphabet, char fillChar,int lenght)
 {
     temp_fill_char = fillChar;
 
-    int lenght;
-    for(lenght=0; old_string[lenght] != '\0';lenght++);
-    char *decode_String = new char[lenght/4*3+1];
+    signed char *decode_String = new signed char[lenght/4*3+1];
 
     int i;
     int n = 0;

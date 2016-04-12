@@ -1,1 +1,1 @@
-include ':codec'
+include ':codectest', ':codec'

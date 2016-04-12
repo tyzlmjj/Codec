@@ -8,4 +8,10 @@ public abstract class Custom
      * @return 结果
      */
     public abstract String doit();
+
+    /**
+     * 执行加解密
+     * @return 结果
+     */
+    public abstract byte[] doit_byte();
 }

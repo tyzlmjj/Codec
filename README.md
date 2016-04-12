@@ -13,7 +13,7 @@
 
 for Gradle:
 ```
-compile 'me.majiajie:codec:1.0.0'
+compile 'me.majiajie:codec:1.1.0'
 ```
 
 and for Maven:
@@ -21,7 +21,7 @@ and for Maven:
 <dependency>
   <groupId>me.majiajie</groupId>
   <artifactId>codec</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <type>pom</type>
 </dependency>
 ```
