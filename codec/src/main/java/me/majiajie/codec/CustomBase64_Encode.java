@@ -1,6 +1,8 @@
 package me.majiajie.codec;
 
 
+import android.support.annotation.NonNull;
+
 import java.nio.charset.Charset;
 
 import me.majiajie.codec.charset.CodecCharsets;
@@ -17,7 +19,7 @@ public class CustomBase64_Encode extends Custom
 
     private Charset mCharset;
 
-    public CustomBase64_Encode(String string)
+    public CustomBase64_Encode(@NonNull String string)
     {
         mString = string;
         mFillChar = Const_Base64.FILL_CHAR;
@@ -31,7 +33,7 @@ public class CustomBase64_Encode extends Custom
      * @param alphabet 64位的字符数组
      * @return 自定义构建类
      */
-    public CustomBase64_Encode setAlphabet(char[] alphabet)
+    public CustomBase64_Encode setAlphabet(@NonNull char[] alphabet)
     {
         mAlphabet = alphabet;
         return this;
@@ -44,7 +46,7 @@ public class CustomBase64_Encode extends Custom
      * @param fillChar 填充字符
      * @return 自定义构建类
      */
-    public CustomBase64_Encode setFillChar(char fillChar) {
+    public CustomBase64_Encode setFillChar(@NonNull char fillChar) {
         mFillChar = fillChar;
         return this;
     }
@@ -56,7 +58,7 @@ public class CustomBase64_Encode extends Custom
      * @param n 每行最大的字符数
      * @return 自定义构建类
      */
-    public CustomBase64_Encode setMaxCharLine(int n)
+    public CustomBase64_Encode setMaxCharLine(@NonNull int n)
     {
         mMaxCharLine = n;
         return this;
@@ -67,7 +69,7 @@ public class CustomBase64_Encode extends Custom
      * @param charset 建议使用{@link CodecCharsets CodecCharsets}
      * @return  自定义构建类
      */
-    public CustomBase64_Encode setCharset(Charset charset) {
+    public CustomBase64_Encode setCharset(@NonNull Charset charset) {
         mCharset = charset;
         return this;
     }
