@@ -10,10 +10,6 @@ JNIEXPORT jbyteArray JNICALL Java_me_majiajie_codec_NativeMethod_Base64Decode
     env->GetCharArrayRegion(alphabet , 0 , 64 , decode_alphabet);
 
     const char *old = env->GetStringUTFChars(oldString, 0);
-    if(old == NULL)
-    {
-        return NULL;
-    }
 
     int lenght;
     for(lenght=0; old[lenght] != '\0';lenght++);

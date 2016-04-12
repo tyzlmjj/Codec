@@ -1,6 +1,8 @@
 package me.majiajie.codec;
 
 
+import android.support.annotation.NonNull;
+
 import java.nio.charset.Charset;
 
 import me.majiajie.codec.charset.CodecCharsets;
@@ -12,7 +14,7 @@ public class Encode
      * @param string  需要加密的字符串
      * @return 加密后的字符串
      */
-    public static String Base64(String string)
+    public static String Base64(@NonNull String string)
     {
         return  new String(Base64_byte(string));
     }
@@ -23,7 +25,7 @@ public class Encode
      * @param charset 字符编码，建议使用{@link CodecCharsets CodecCharsets}
      * @return 加密后的字符串
      */
-    public static String Base64(String string,Charset charset)
+    public static String Base64(@NonNull String string,@NonNull Charset charset)
     {
         return  new String(Base64_byte(string),charset);
     }
@@ -33,7 +35,7 @@ public class Encode
      * @param string    需要加密的字符串
      * @return 加密后的byte数组
      */
-    public static byte[] Base64_byte(String string)
+    public static byte[] Base64_byte(@NonNull String string)
     {
         return  NativeMethod.Base64Encode
                 (string,Const_Base64.DEFAULT_ALPHABET,Const_Base64.FILL_CHAR,Const_Base64.MAX_CHAR_PRE_LINE);
@@ -44,7 +46,7 @@ public class Encode
      * @param string    需要加密的字符串
      * @return 加密后的字符串
      */
-    public static CustomBase64_Encode Custom_Base64(String string)
+    public static CustomBase64_Encode Custom_Base64(@NonNull String string)
     {
         return new CustomBase64_Encode(string);
     }
@@ -54,7 +56,7 @@ public class Encode
      * @param string    需要加密的字符串
      * @return 加密后的字符串
      */
-    public static String MD5(String string)
+    public static String MD5(@NonNull String string)
     {
         return  NativeMethod.Md5Encode(string,false,true);
     }
@@ -64,7 +66,7 @@ public class Encode
      * @param string    需要加密的字符串
      * @return 加密后的字符串
      */
-    public static String MD5_UpperCase(String string)
+    public static String MD5_UpperCase(@NonNull String string)
     {
         return  NativeMethod.Md5Encode(string, false, false);
     }
@@ -74,7 +76,7 @@ public class Encode
      * @param string    需要加密的字符串
      * @return 加密后的字符串
      */
-    public static String MD5_16(String string)
+    public static String MD5_16(@NonNull String string)
     {
         return  NativeMethod.Md5Encode(string, true, true);
     }
@@ -84,7 +86,7 @@ public class Encode
      * @param string    需要加密的字符串
      * @return 加密后的字符串
      */
-    public static String MD5_16_UpperCase(String string)
+    public static String MD5_16_UpperCase(@NonNull String string)
     {
         return  NativeMethod.Md5Encode(string, true, false);
     }

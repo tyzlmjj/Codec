@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.nio.charset.Charset;
-
 import me.majiajie.codec.Decode;
 import me.majiajie.codec.Encode;
 
@@ -17,9 +15,6 @@ import me.majiajie.codec.Encode;
 public class MainActivity extends AppCompatActivity
 {
 
-    static {
-        System.loadLibrary("Codec");
-    }
     Button btn_base64_encode;
     Button btn_md5_encode;
     Button btn_base64_decode;
@@ -46,8 +41,6 @@ public class MainActivity extends AppCompatActivity
         jniBase64解码：3~12毫秒。
         javaBase64解码：6~25毫秒。
          */
-
-
 
         editText.setText("输入需要加密的字符串");
         btn_base64_encode.setOnClickListener(new View.OnClickListener() {
